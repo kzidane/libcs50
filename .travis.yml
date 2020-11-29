@@ -9,11 +9,11 @@ packagecloud: &packagecloud
 
 deb: &deb
   <<: *packagecloud
-  local-dir: build/deb
+  local-dir: "build/deb"
 
 rpm: &rpm
   <<: *packagecloud
-  local-dir: build/rpm
+  local-dir: "build/rpm"
 
 branches:
   except: "/^v\\d/"
@@ -34,91 +34,91 @@ deploy:
   # Ubuntu
   # 12.04
   - <<: *deb
-    dist: ubuntu/precise
+    dist: "ubuntu/precise"
 
   # 12.10
   - <<: *deb
-    dist: ubuntu/quantal
+    dist: "ubuntu/quantal"
 
   # 13.04
   - <<: *deb
-    dist: ubuntu/raring
+    dist: "ubuntu/raring"
 
   # 13.10
   - <<: *deb
-    dist: ubuntu/saucy
+    dist: "ubuntu/saucy"
 
   # 14.04
   - <<: *deb
-    dist: ubuntu/trusty
+    dist: "ubuntu/trusty"
 
   # 14.10
   - <<: *deb
-    dist: ubuntu/utopic
+    dist: "ubuntu/utopic"
 
   # 15.04
   - <<: *deb
-    dist: ubuntu/vivid
+    dist: "ubuntu/vivid"
 
   # 15.10
   - <<: *deb
-    dist: ubuntu/wily
+    dist: "ubuntu/wily"
 
   # 16.04
   - <<: *deb
-    dist: ubuntu/xenial
+    dist: "ubuntu/xenial"
 
   # 16.10
   - <<: *deb
-    dist: ubuntu/yakkety
+    dist: "ubuntu/yakkety"
 
   # 17.04
   - <<: *deb
-    dist: ubuntu/zesty
+    dist: "ubuntu/zesty"
 
   # 17.10
   - <<: *deb
-    dist: ubuntu/artful
+    dist: "ubuntu/artful"
 
   # 18.04
   - <<: *deb
-    dist: ubuntu/bionic
+    dist: "ubuntu/bionic"
 
   # 19.04
   - <<: *deb
-    dist: ubuntu/disco
+    dist: "ubuntu/disco"
 
   # 19.10
   - <<: *deb
-    dist: ubuntu/eoan
+    dist: "ubuntu/eoan"
 
   # 20.04
   - <<: *deb
-    dist: ubuntu/focal
+    dist: "ubuntu/focal"
 
   # 20.10
   - <<: *deb
-    dist: ubuntu/groovy
+    dist: "ubuntu/groovy"
 
   # Fedora
   - <<: *rpm
-    dist: fedora/24
+    dist: "fedora/24"
   - <<: *rpm
-    dist: fedora/25
+    dist: "fedora/25"
   - <<: *rpm
-    dist: fedora/26
+    dist: "fedora/26"
   - <<: *rpm
-    dist: fedora/27
+    dist: "fedora/27"
   - <<: *rpm
-    dist: fedora/28
+    dist: "fedora/28"
   - <<: *rpm
-    dist: fedora/29
+    dist: "fedora/29"
   - <<: *rpm
-    dist: fedora/30
+    dist: "fedora/30"
   - <<: *rpm
-    dist: fedora/31
+    dist: "fedora/31"
   - <<: *rpm
-    dist: fedora/32
+    dist: "fedora/32"
 
   # GitHub release
   - provider: releases
